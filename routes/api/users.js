@@ -12,6 +12,7 @@ const User = require("../../models/User");
 
 router.get("/", (req, res) => {
   try {
+    console.log("hi")
     let jwtUser = jwt.verify(verify(req), keys.secretOrKey);
     let id = mongoose.Types.ObjectId(jwtUser.id);
 
